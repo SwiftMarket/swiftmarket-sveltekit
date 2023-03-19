@@ -1,0 +1,13 @@
+{
+	"workbench.editor.labelFormat": "short",
+	"workbench.tree.indent": 16,
+	"explorer.compactFolders": false,
+	"material-icon-theme.folders.color": "#35a92b",
+	"editor.formatOnSave": true,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	}
+}
