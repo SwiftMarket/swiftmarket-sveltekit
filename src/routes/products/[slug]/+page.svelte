@@ -8,8 +8,18 @@
 	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 
 	export let data: any;
+	let original_data = data;
 	let product = data;
 	let quantity = 1;
+
+	$: {
+		if (original_data !== data) {
+			product = data;
+			product.images = product.images;
+			quantity = 1;
+			original_data = data;
+		}
+	}
 
 	function prepareToCart() {
 		let item: CartItem;

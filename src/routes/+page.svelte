@@ -8,6 +8,10 @@
 	let banners = data.carousels;
 </script>
 
+<svelte:head>
+	<title>SwiftMarket</title>
+</svelte:head>
+
 {#if banners.length !== 0}
 	<Carousel {banners} />
 {/if}

@@ -5,7 +5,16 @@
 	export let images: any;
 	export let alt_text: string;
 
-	let active_image: string = images[0];
+	let original_image = images[0];
+
+	let active_image = images[0];
+
+	$: {
+		if (original_image !== images[0]) {
+			active_image = images[0];
+			original_image = images[0];
+		}
+	}
 
 	function setImage(src: string) {
 		active_image = src;
