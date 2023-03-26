@@ -85,7 +85,7 @@
 	<hr class="mb-5" />
 
 	{#if cartItemsValue.length !== 0}
-		<div class="flex-col">
+		<div class="flex-col overflow-y-auto">
 			{#each $cartItemsStore as cartItem}
 				<div class="flex mx-5 mb-5 gap-5">
 					<img
@@ -136,7 +136,7 @@
 		<div class="flex flex-col justify-center h-full">
 			<p class="text-center">Your cart is empty</p>
 			<div class="px-10 py-10">
-				<a href="/" target="_self">
+				<a href="/shop/all" target="_self">
 					<button
 						class="w-full h-12 text-black font-bold transition-colors duration-150 bg-yellow-300 focus:shadow hover:bg-yellow-500"
 					>
