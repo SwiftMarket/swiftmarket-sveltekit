@@ -5,7 +5,16 @@
 	export let images: any;
 	export let alt_text: string;
 
-	let active_image: string = images[0];
+	let original_image = images[0];
+
+	let active_image = images[0];
+
+	$: {
+		if (original_image !== images[0]) {
+			active_image = images[0];
+			original_image = images[0];
+		}
+	}
 
 	function setImage(src: string) {
 		active_image = src;
@@ -13,11 +22,7 @@
 	}
 
 	function generateStyle(src: string) {
-		let style = 'w-36';
-		if (src === active_image) {
-			style += ' outline outline-2';
-		}
-		return style;
+		return src === active_image ? 'outline outline-2' : '';
 	}
 </script>
 
@@ -30,7 +35,7 @@
 		alt={alt_text}
 	/>
 
-	<div class="flex flex-wrap gap-3">
+	<div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
 		{#each images as image}
 			<button on:click={() => setImage(image)}>
 				<img

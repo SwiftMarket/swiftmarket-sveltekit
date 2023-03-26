@@ -16,6 +16,7 @@ export const POST = (async ({ request }) => {
 			const item = await pb.collection('products').getOne(product.id);
 
 			const finalPrice: number = item.sale_price === 0 ? item.price : item.sale_price;
+			const roundedNumber = Number(Math.round(parseFloat(finalPrice * 100 + 'e' + 2)) + 'e-' + 2);
 
 			return {
 				price_data: {
@@ -24,7 +25,7 @@ export const POST = (async ({ request }) => {
 						name: item.name,
 						images: [`${PUBLIC_POCKETBASE_URL}/api/files/products/${item.id}/${item.images[0]}`]
 					},
-					unit_amount: finalPrice * 100
+					unit_amount: roundedNumber
 				},
 				quantity: product.quantity
 			};

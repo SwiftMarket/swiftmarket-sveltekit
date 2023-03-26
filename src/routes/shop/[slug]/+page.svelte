@@ -7,6 +7,10 @@
 	$: products = data.items;
 </script>
 
+<svelte:head>
+	<title>SwiftMarket Shop</title>
+</svelte:head>
+
 <div class="flex justify-center items-center gap-6 m-auto p-5 flex-wrap">
 	<a class="hover:underline underline-offset-4" href="/shop/all">All</a>
 	<a class="hover:underline underline-offset-4" href="/shop/iphone-cases">iPhone Cases</a>

@@ -8,8 +8,18 @@
 	import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 
 	export let data: any;
+	let original_data = data;
 	let product = data;
 	let quantity = 1;
+
+	$: {
+		if (original_data !== data) {
+			product = data;
+			product.images = product.images;
+			quantity = 1;
+			original_data = data;
+		}
+	}
 
 	function prepareToCart() {
 		let item: CartItem;
@@ -31,7 +41,7 @@
 	<title>{product.name} | SwiftMarket</title>
 </svelte:head>
 
-<div class="flex flex-col mx-10 py-10 gap-5 lg:flex-row lg:gap-8">
+<div class="flex flex-col mx-3 py-10 gap-5 lg:mx-10 lg:flex-row lg:gap-8">
 	<div class="basis-1/2 px-8">
 		<ImageGallery productId={product.id} images={product.images} alt_text={product.name} />
 	</div>
@@ -75,7 +85,7 @@
 		<div class="basis-1/2">
 			<p class="font-medium text-lg uppercase">Related</p>
 
-			<div class="grid gap-12 grid-cols-3 pr-5 py-5 lg:grid-cols-2">
+			<div class="grid gap-12 pr-5 py-5 grid-cols-2">
 				{#each product.expand.related_products as relatedProduct (relatedProduct.id)}
 					<ProductItem
 						title={relatedProduct.name}
