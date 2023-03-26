@@ -22,11 +22,7 @@
 	}
 
 	function generateStyle(src: string) {
-		let style = 'w-36';
-		if (src === active_image) {
-			style += ' outline outline-2';
-		}
-		return style;
+		return src === active_image ? 'outline outline-2' : '';
 	}
 </script>
 
@@ -39,7 +35,7 @@
 		alt={alt_text}
 	/>
 
-	<div class="flex flex-wrap gap-3">
+	<div class="grid gap-3 grid-cols-2 lg:grid-cols-4">
 		{#each images as image}
 			<button on:click={() => setImage(image)}>
 				<img
