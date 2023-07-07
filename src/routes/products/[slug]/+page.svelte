@@ -38,9 +38,8 @@
 </script>
 
 <svelte:head>
-	<title>{product.name} | SwiftMarket</title>
+	<title>{product.name} | 44 Stems</title>
 </svelte:head>
-
 <div class="flex flex-col mx-3 py-10 gap-5 lg:mx-10 lg:flex-row lg:gap-8">
 	<div class="basis-1/2 px-8">
 		<ImageGallery productId={product.id} images={product.images} alt_text={product.name} />
@@ -103,3 +102,5 @@
 		</div>
 	{/if}
 </div>
+
+

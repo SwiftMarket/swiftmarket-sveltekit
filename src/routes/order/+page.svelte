@@ -30,7 +30,7 @@
 	>
 		<p class="p-20 font-bold text-5xl text-center">Oh no</p>
 		<p class="pb-20 text-xl text-center">
-			Seems like something went wrong because the <b>order failed</b>...
+			Seems like something went wrong <b>did you forget something?</b>
 		</p>
 	</div>
 {/if}

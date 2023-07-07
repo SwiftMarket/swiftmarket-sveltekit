@@ -5,11 +5,11 @@
 </script>
 
 <svelte:head>
-	<title>SwiftMarket</title>
+	<title>44 Stems</title>
 
 	<meta
 		name="description"
-		content="E-commerce solution built with SvelteKit, a headless CMS integration, uses Stripe for payments, providing better performance and faster development time"
+		content="44 Stems"
 	/>
 </svelte:head>
 

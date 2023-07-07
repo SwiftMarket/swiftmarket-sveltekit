@@ -58,7 +58,7 @@
 </script>
 
 <div
-	class="fixed w-full max-w-lg right-0 inset-y-0 flex flex-col bg-white z-20"
+	class="fixed w-auto max-w-lg right-0 inset-y-0 flex-col bg-white z-20 s "
 	use:clickoutside={{ limit: { parent: backgroundNode } }}
 	on:clickoutside={() => (cartOpened = false)}
 >

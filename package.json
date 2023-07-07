@@ -21,6 +21,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.54.0",
 		"@typescript-eslint/parser": "^5.54.0",
 		"autoprefixer": "^10.4.13",
+		"daisyui": "^3.1.11",
 		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -39,9 +40,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@popperjs/core": "^2.11.8",
 		"@stripe/stripe-js": "^1.48.0",
+		"flowbite": "^1.7.0",
+		"flowbite-svelte": "^0.39.2",
 		"pocketbase": "^0.12.1",
 		"svelte-markdown": "^0.2.3",
+		"tailwind-merge": "^1.13.2",
 		"tw-elements": "1.0.0-beta1"
 	}
 }
